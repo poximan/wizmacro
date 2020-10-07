@@ -2,8 +2,8 @@
 splits = {
   encabezado: string,
   macros_planas: string,
-  macros_arr : string,
-  macros_ord : string
+  macros_arr_orig : string,
+  macros_arr_orden : string
 }
 */
 
@@ -21,7 +21,7 @@ exports.clasificar = (entrada) => {
     macros_planas: entrada.slice(i + 4)
   }
 
-  obj_macro.macros_arr = obj_macro.macros_planas.split(EXP_PREG)
+  obj_macro.macros_arr_orig = obj_macro.macros_planas.split(EXP_PREG)
   return obj_macro
 }
 

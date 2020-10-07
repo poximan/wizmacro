@@ -2,8 +2,8 @@
 splits = {
   encabezado: string,
   macros_planas: string,
-  macros_arr : string,
-  macros_ord : string
+  macros_arr_orig : string,
+  macros_arr_orden : string
 }
 */
 
@@ -34,7 +34,7 @@ exports.guardar = (path, cadena, sufijo, cb) => {
 // ................................................................
 
 exports.aTexto = (obj_macro) => {
-  return obj_macro.encabezado.toString() + obj_macro.macros_ord.join('')
+  return obj_macro.encabezado.toString() + obj_macro.macros_arr_orden.join('')
 }
 
 // ................................................................

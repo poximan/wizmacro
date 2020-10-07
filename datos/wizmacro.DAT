@@ -32,3 +32,12 @@ VERSION = 7.6
 010 A V1ABRIR <> N 2
     R6000 ABRIR V1
     TagAssignment SCADA_MADRYN:R600VA1_2OPEN_A 1
+011 A NIV_C51 <> N 2
+    Copia TAGS-->AUX
+    LoadRecipe 'Niv_50.t_a'
+012 A NIV_C52 <> N 2
+    Abre Pant SET LEVEL
+    LoadWindow 'SET_LEV_C50' 1
+013 P NIV_C5T1 <> N 4
+    NIV_C81+NIV_C82
+    11,12
