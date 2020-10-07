@@ -1,15 +1,28 @@
+/*
+splits = {
+  encabezado: string,
+  macros_planas: string,
+  macros_arr : string,
+  macros_ord : string
+}
+*/
+
 const EXP_PREG = /^\d\d\d\s/gm;
 
-exports.procesar = (entrada, cb) => {
+// ................................................................
+// obtener datos y clasificarlos
+// ................................................................
+
+exports.clasificar = (entrada) => {
 
   const i = entrada.indexOf('000');
-  let splits = {
+  let obj_macro = {
     encabezado: entrada.slice(0, i),
     macros_planas: entrada.slice(i + 4)
   }
 
-  splits.macros_arr = splits.macros_planas.split(EXP_PREG)
-  cb(splits)
+  obj_macro.macros_arr = obj_macro.macros_planas.split(EXP_PREG)
+  return obj_macro
 }
 
 console.log("PARSER: modulo cargado");

@@ -1991,3 +1991,15 @@ VERSION = 7.6
 663 A CHPUJ2P2 <> N 3
     CHAR PUJ2 P2
     LoadWindow 'BPUJ2_P2' 2 
+664 A prueba1 <> N 3
+    prueba mac1
+    TagAssignment SCADA_MADRYN:PRUEBA_MACRO1 99 
+665 A prueba2 <> N 3
+    prueba mac2
+    TagAssignment SCADA_MADRYN:PRUEBA_MACRO2 33 
+666 A prueba4 <> N 3
+    prueba mac2 reset
+    TagAssignment SCADA_MADRYN:PRUEBA_MACRO2 13 
+667 A prueba3 <> N 3
+    prueba mac1 reset
+    TagAssignment SCADA_MADRYN:PRUEBA_MACRO1 3 

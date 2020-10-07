@@ -1,17 +1,20 @@
+/*
+splits = {
+  encabezado: string,
+  macros_planas: string,
+  macros_arr : string,
+  macros_ord : string
+}
+*/
+
 const fs_origen = require('fs')
 const fs_destino = require('fs')
 
-const parser = require("./parser")
-const ordenador = require("./ordenador")
-
-const path = ".//datos//wizmacro.DAT"
-
 // ................................................................
-// crear macros nuevas
 // guardar macros ordenadas
 // ................................................................
 
-guardar = (path, cadena, sufijo) => {
+exports.guardar = (path, cadena, sufijo, cb) => {
 
   let nuevo_path = path
 
@@ -22,26 +25,27 @@ guardar = (path, cadena, sufijo) => {
 
   fs_destino.writeFile(nuevo_path, cadena, (err) => {
     if (err) console.log(err)
+    cb()
   });
 }
 
 // ................................................................
-// acceso a macros originales
-// obtener datos y clasificarlos
+// conversion a texto plano
 // ................................................................
 
-leer = (path, cb) => {
+exports.aTexto = (obj_macro) => {
+  return obj_macro.encabezado.toString() + obj_macro.macros_ord.join('')
+}
+
+// ................................................................
+// acceso a macros originales
+// ................................................................
+
+exports.leer = (path, cb) => {
   fs_origen.readFile(path, "utf-8", (err, datos) => {
     if (err) console.log(err)
-
     cb(datos)
   })
 }
 
-leer(path, (entrada) => {
-  parser.procesar(entrada, (splits) => {
-    ordenador.ordenar(splits, (macros_ord) => {
-      guardar(path, macros_ord, "-proc")
-    })
-  })
-})
+console.log("ARCHIVO: modulo cargado");
