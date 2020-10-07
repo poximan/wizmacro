@@ -1,0 +1,1 @@
+const archivo = require("./archivo");

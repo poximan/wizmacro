@@ -1,0 +1,17 @@
+{
+  "name": "wizmacro",
+  "version": "1.0.0",
+  "description": "ordenador de macros para wizcon 7.6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "keywords": [
+    "wizcon",
+    "scada",
+    "macro"
+  ],
+  "author": "poximan",
+  "license": "ISC"
+}
