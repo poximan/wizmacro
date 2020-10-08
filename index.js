@@ -30,12 +30,10 @@ archivo.leer(path, (entrada) => {
   ordenador.ordenar(obj_macro)
 
   ordenador.recupReferencias(obj_macro)
-
-  // console.log(obj_macro.macros_arr_orig);
-  // console.log(obj_macro.macros_arr_orden);
+  //ordenador.testResultados(obj_macro)
 
   ordenador.agregarPosicion(obj_macro)
 
   const salida = archivo.aTexto(obj_macro)
-  archivo.guardar(path, salida, "-proc", () => { console.log("proceso terminado");})
+  archivo.guardar(path, salida, "-proc", (msg) => { console.log(msg) })
 })

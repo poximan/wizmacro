@@ -25,7 +25,7 @@ exports.guardar = (path, cadena, sufijo, cb) => {
 
   fs_destino.writeFile(nuevo_path, cadena, (err) => {
     if (err) console.log(err)
-    cb()
+    cb("proceso terminado")
   });
 }
 
