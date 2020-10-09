@@ -7,7 +7,7 @@ splits = {
 }
 */
 
-const path = ".//datos//wizmacro.DAT"
+const path = ".//datos//wizmacro2.DAT"
 
 const archivo = require("./archivo");
 const parser = require("./parser")

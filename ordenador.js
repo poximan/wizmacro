@@ -109,7 +109,7 @@ exports.ordenar = (obj_macro) => {
     if ( a.substring([2]) === b.substring([2]) ) { return 0 }
 
     console.log("error ordenando macros")
-    exit()
+    process.exit()
   });
 
   return obj_macro

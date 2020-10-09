@@ -43,7 +43,11 @@ exports.aTexto = (obj_macro) => {
 
 exports.leer = (path, cb) => {
   fs_origen.readFile(path, "utf-8", (err, datos) => {
-    if (err) console.log(err)
+
+    if (err) {
+      console.log(err)
+      process.exit()
+    }
     cb(datos)
   })
 }
